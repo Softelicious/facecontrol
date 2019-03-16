@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "domistutorial",
+  "private_key_id": "6af0007d7e261ce86d1d8a8a853999e805ce593a",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCwTIU0WVSCpwul\nlnr8FVGJfg6fGw7eHR/r5rZvpj/Q56JJ+GQeI6U8kfvDl1J0ghjVRgJfotaVJqAa\n+pw9IAM14roFVU76LbOCKgVgl4njI/AkMeAu+VU6addScv77pb1I12CNN0k0JB7K\nyxjg7lI7KtNHkKpCGQLNH2Ye3gta2nFLJceJMcW37tg/DotGy0nv+zjYsBnpR16o\nNbnWsXB9rXBQs+j2aTVSkglqCpf+6qwL1jNO62KXZcZpaEuvpaBdbbE8WUdOP7Ee\nP+sV1Dsxi25g5fJd9LTEsCYie3dFyZa6gNXm2OOTJEu5SmtzpLBf65wdiHFG33iB\nuQ55sGUnAgMBAAECggEARARZte8q/Dc/dpS+gSgma5HfSUIys73v1V8PDrdI0quz\nQK+czMX614oI5JaqoLmapBndC5GzERs0VQRQKAMEShNdqnYVwM7F/VeB+JiugZwZ\nZ5V4hRb760vvX2dveZ4hj4tMvF7SltPCr4G46Pr5bcthdTBah6LHomTVTN5k6hlM\npPxCTwzK5U+HHrqx6oB4oqwvRviHelD5my+BmTj9LAQfYoOa8lUamZ665PYvQ1aO\ndfPBr453aciEuIgSNMiTFv65tLoBdNr4GxA1YmS2+WYKNgP8bkJHbJsU8daV/wJR\nm8aURdk1u/oZ3WICp3sFEaNV8QRBwLqI/M5tU+BX4QKBgQDxxEeyssvaHYXC7nhU\n/yi/QtbM32zwGtG/NuBZQzLUrBPH2bud92rhdl3A1Su/iS09Q+XNL32tEZgLTlQP\nKZiHGdkwXxfptedZSRaKe31vvOlI6sLofpXcfWc8xPVplGdnccOEB2xUM1+EkAwt\nQdLakbSZA9EXtxVV0GPpoWKxxwKBgQC6rY9xvpGEp0J1OrLoxH/6uIOkCb9ZbMVg\nYkrA5A/GFafwqHhU0VcfYZRl3ZIXpgBmavib1ODVS/i5yLNtCbnk/8lTzzr5mqtj\nDj88vrTMsyYQ6Fjy0OE62r9CdtXVV6y/WULiqv+FONxdgQ5+fftHzH/sxtz17xny\nbKbqVKyxoQKBgHfkknm32QfNZCwK/nmIH7jZeJQYqHlZk3Jz0EXz4R0+SIDvJO9t\nZv9wJ4YdMJjHejvLlAZw6q4M742LxnvOcOlulBo8zisEHjpU2GzMWKQ01qtmYEnT\nnJW/SpcERX+aLL1L2V18IOiQoWmn1aIL5nilkR3gmqxcCqSHt0SA1+S5AoGBAKE4\ns+HwS4zdRzAnecw9qKnIISjSokeBARW0zgq47EaO/XOCjCn0geHATIGNUlbKLx5E\n1GEBAQw1iKIrC4roE3wKzL1tA+n+AnaSH1s++LaxIfcIM4nBjENgGD42k4alKbQ4\nSuOn+vX7nZXDl9j2xMXFf9XmCX78+NO9soo+hscBAoGBAOCzH9/veeJ+WnLQipEE\nktFwQGX9MhbFM4JuQYVNBXcabqERwfMbtsAu4unXEBzzDxuNIdfb+IzpmwvQD+8f\ns+pG0zkW+vHDPLkUK7srKIjgoH6tK+xAudn0MEAfoxzOVirsCHGyCQ13ajNprFvp\ngKydcIZ9Wt8unhPeMxMXuEYN\n-----END PRIVATE KEY-----\n",
+  "client_email": "facerecognition@domistutorial.iam.gserviceaccount.com",
+  "client_id": "103250507341944190923",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/facerecognition%40domistutorial.iam.gserviceaccount.com"
+}

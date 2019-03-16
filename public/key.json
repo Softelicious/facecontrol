@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "disco-axis-234615",
+  "private_key_id": "43d77cad0df871201aa482e74e9cc9a430fd8f9d",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDAy/U1d1Xqq8hV\nrlIRxhwBuScCOEMvMf8AQLOhi1iE1yiwFjB0YUNLN8Gy+fVIomT0VIEuHlW6AiJC\n/NvhIorqt4s/eDXI7rDhMj2nxe3NuT/mk8lCgeU13jbiprqysXLbrmnzC8SXDxHv\npK9WnE89Fm1gZPop1o5MrrSv7fUwQFAmx9r6HK+byRKU6hdGuIT5Hzn/2p5mNSJA\nju8Gdm7MPGbL1Y8p08wkzqf3/P5Uj+PkPuMVON3Tff7N/n53Z25a0FU7D/Nhg5xp\niCb1IpEkW08a2HtmULXsJA3MSJgixqXYM85ZZXt9PvUSGBBD1hYoV+uT1xhjyZkk\nz4I9NLfHAgMBAAECggEAW+he6rAK6yYdCItjYEm6zC+BoxNDI9qHn404lMgi2KDh\nKqBJVRGQzOi1lCaIgam4yqkGNAAOCfA+eQSlpTucUaxR213o9fKjq5cRwUsfxDSN\ne9Pz25qks/tM2tt0oP7qrEMHCvAPNZvfhwhQ9c7qD0sDtTIt94fqqi+Wv0+G1Qrf\nk8BrvJyEJ9ECcDBpfNfs9draLkeoyxDBPPVA00H0K53OkO6VP7GPYAL1uXY7DNf/\nKvQn1+JLQhOCzEG1szFYma9Wf7RIurRKdGv4Ir7QFIBfB2vv4KkB7so8OtRgfqHc\nqkJOX28K4dgq1CKAs7esM5E2aGiieGp+c6QaQBz7kQKBgQDpv9x1emtjyHYCWlBe\nFxcG445aMBrKYlmpNNYgGXLsB0wndpPL5AzH1yflV12scny6+o05JlZTEDytH3pJ\nsD89NztLSm9974viaVabIae6hAVdsfiCpgXO+9JBZ0WgW7RhW220TCFoEVEAO0MU\n6ZprMdxdi24Rs8pTDxPRQdksJQKBgQDTJiMSRWXOTjn0YCOM/kIMnTqbRE2xJsST\nd0YLJfTQtw7PVH5dZro5qrNqA1QtADh1ka21LNTIceGnbTjBWTdm4kJkQ11HrmYk\nBstk3ZEzlfVSciSHfMhIiDhnnWX9q0pai3+1k/LrPzKReZ8S/7OdGsmL45w3NE67\npxeIG6HaewKBgQDjecVvxjzwFEtTqtR/XHUaTSVhe2L3BZM/6Z1gC6QdMlTYKrtW\nNo6BhE7dD5KnmZrs05vPvBFSMID78aAuSgig6DkZ4kxyAEbfhae0vKHgD06xidrQ\nOgV5EvPglkHZ9qSqAjHWvifcgM2VLhbwKQ4Pt6w+lMv/CjqhbhDZGf3gyQKBgQCU\nEMlFNb8HZdnEIWqso1ujxtnjKYmlsX7lvh0zEiHT/pp3D1QxoSjz6V04+S6dA+uT\nnl2Gj/KCwUExDClhhHOSRRWzg321F3nux4j3qVv6Ja1LbFlrXTiBjGypVDnCIczZ\nI7uhlCcjikSmuPew9fh5MeClpS3VlGulsa2Rt3bPYwKBgBZ/iOK4RMZM/PY+AXhR\nyIWu3ofouIp2EnHiRSPa9zJefKVD/sOqzv+1VhrAiWHcRaitOHRTVzBBSJEvpCvh\nkgB+/tnsVB90ZQj4ner3oUc6AFyRNkZayf8I1pYTy9OMxbXOYTdQa6T0BO66kKfT\ntiUlFjuOpY1x3jGYY+E2pgCg\n-----END PRIVATE KEY-----\n",
+  "client_email": "recognition@disco-axis-234615.iam.gserviceaccount.com",
+  "client_id": "114768097847807944165",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/recognition%40disco-axis-234615.iam.gserviceaccount.com"
+}
