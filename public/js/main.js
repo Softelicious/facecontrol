@@ -1,19 +1,30 @@
-Dropzone.options.dropzone =
-    {
-        maxFilesize: 12,
-        renameFile: function(file) {
-            var dt = new Date();
-            var time = dt.getTime();
-            return time+file.name;
-        },
-        acceptedFiles: ".jpeg,.jpg,.png,.gif",
-        addRemoveLinks: true,
-        timeout: 5000,
-        success: function(file, response)
-        {
-            console.log(response);
-        },
-        error: function(file, response)
-        {
-            return false;
-        }
+(function () {
+        var video = document.getElementById('vid');
+        var vendorURL = window.URL || window.webkitURL;
+        var checkButton = document.getElementById('button-check');
+        var canvas = document.getElementById('canvas');
+        var context = canvas.getContext('2d');
+        var image = document.getElementById('img-check');
+        var input = document.querySelector('#path');
+
+        navigator.getMedia =   (   navigator.getUserMedia
+            || navigator.webkitGetUserMedia
+            || navigator.mozGetUserMedia
+            || navigator.msGetUserMedia);
+        navigator.getMedia({
+            video: true,
+            audio: false
+        }, function(stream) {
+            video.srcObject=stream;
+            video.play();
+        }, function (error) {
+            alert(error);
+        });
+
+        checkButton.addEventListener('click', function () {
+            context.drawImage(video, 0, 0);
+            image.setAttribute('src', canvas.toDataURL('image/png'));
+            input.setAttribute('value', canvas.toDataURL('image/png'));
+        });
+    }
+)();

@@ -1,4 +1,3 @@
-
 ul{
     margin: 3px !important;
 
@@ -24,50 +23,76 @@ body{
 .loading{
     opacity: 0.2;
 }
-.container{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -45%);
-    justify-content: center;
-    background-color: #182134;
-    box-shadow: 0 -5px 0 #2c536c;
+
+.photo-check{
+    margin-left: 770px!important;
+    width: 200px;
 }
-.camera{
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.65+0,0+100;Neutral+Density */
-    background-color: #1a394f;
-    display: flex;
-    justify-content: center;
-    height: 550px;
-    margin: 10px;
+.photo{
+    float: right;
+    display: inline-block;
+}
+.photo a{
+    float: right;
+    width: 200px;
 }
 
-@media only screen and (max-width: 600px) {
+.camera{
+    background-color: #1a394f;
+    height: 545px;
+    margin: 10px;
+    width: 98%;
+}
+
+.user-info {
+    width: 32%;
+    float: right;
+    color: white;
+    text-align: center;
+    box-shadow: 0 -5px 0 #2c536c;
+    word-break: normal;
+}
+
+@media only screen and (max-width: 800px) {
     .container{
-        justify-content: center;
-        background-color: #182134;
-        box-shadow: 0 -5px 0 #2c536c;
         width: 90%;
+        height: auto;
+        display: block;
+        justify-content: center;
     }
     .camera{
-        height: 450px;
-    }
+        height: auto;
+        margin: 5px;
+        padding: 2px;
+        display: block;
+        justify-content: center;
+        }
     .init{
         display: none;
     }
     .navigacija{
         justify-content: center!important;
     }
-}
-.box {
-    width: 500px;
-    margin: 200px 0;
-}
-.float {
-    position: absolute;
-    z-index: 2;
+    #myForm input, #myForm2 input, #myForm3 input{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+    }
+    .user-info{
+        width: 92%;
+        margin-top: 5px;
+        padding: 1em;
+        overflow: fragments;
+    }
+    #vid{
+        width: 100%;
+    }
 }
 
+.buttonSubmit{
+    width: 32%;
+}
 .form {
     margin-left: 145px;
 }
@@ -85,6 +110,7 @@ body{
 .login-body a:hover{
     text-decoration: none;
 }
+
 .login-body .container{
     width: 450px;
     height: 600px;
@@ -151,15 +177,15 @@ label{
 }
 
 .login-body .reg-input:nth-child(4)::before{
-     content: "\f0e0";
- }
+    content: "\f0e0";
+}
 .login-body .reg-input:nth-child(5)::before{
     content: "\f03e";
 }
 
 .login-body .reg-input-password{
-     content: "\f0e0";
- }
+    content: "\f0e0";
+}
 
 .login-body .reg-input:hover::before{
     color:#319ebc;
@@ -169,4 +195,34 @@ label{
 .login-body reg-input input:hover {
     box-shadow: 0 0 6px 3px rgba(58, 219, 253, 0.4);
 }
+.box {
+    width: 500px;
+    margin: 200px 0;
+}
+.float {
+    position: absolute;
+    z-index: 2;
+}
 
+.dom-container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -45%);
+    background-color: #182134;
+    box-shadow: 0 -5px 0 #2c536c;
+    padding: 0em;
+}
+#vidd{
+    height: 550px;
+    line-height: 550px;
+    text-align: center;
+    vertical-align: middle;
+    width: 735px;
+    background-color: #182134;
+    display: none;
+}
+
+#vid{
+
+}

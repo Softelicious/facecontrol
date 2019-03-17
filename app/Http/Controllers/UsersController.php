@@ -3,9 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use App\Recognition;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\DB;
+
 
 class UsersController extends Controller
 {
@@ -107,5 +111,67 @@ class UsersController extends Controller
     public function login(Request $request)
     {
         return 123;
+    }
+    public function checkBlacklist(Request $request)
+    {
+        //$username = $request['username'];
+        //$image = DB::table('users')->where('username', $username)->value('user_image');
+        $data = [
+            'username' => 'Apsauginis',
+            'message'=> "Spausk 'Tikrinti', kad sužinotum ar praleisti lankytoją"
+        ];
+
+        return view('layouts.content')->with('data', $data);//
+    }
+    public function addToBlacklist(Request $request)
+    {
+        $this->validate($request, [
+            'filePath' => 'nullable',
+            'fileName' => 'nullable',
+            'filePathSym' => 'nullable',
+            'username' => 'required'
+        ]);
+        $fileName = $request['fileName'];
+
+        Storage::disk('local')->move($request['filePath'], "public/blacklist/$fileName");
+        $recognition = new Recognition();
+        $recognition->path = $request['filePathSym'];
+        $recognition->name = $fileName;
+        $recognition->save();
+
+        $data = [
+            'username' => $request['username'],
+            'filePath' => null,
+            'fileName' => null,
+            'filePathSym' => null,
+            'message'=> "Spausk 'Tikrinti', kad sužinotum ar praleisti lankytoją"
+        ];
+
+        return view('layouts.content')->with('data', $data);//
+    }
+    public function removeFromBlacklist(Request $request)
+    {
+        $this->validate($request, [
+            'filePath' => 'nullable',
+            'fileName' => 'nullable',
+            'filePathSym' => 'nullable',
+            'username' => 'required'
+        ]);
+        $fileName = $request['fileName'];
+
+        DB::table('recognition')->where('path', $request['filePathSym'])->delete();
+        Storage::disk('local')->delete($request['filePath']);
+        Storage::deleteDirectory("public/temp");
+        Storage::makeDirectory("public/temp");
+
+        $data = [
+            'username' => $request['username'],
+            'path' => null,
+            'fileName' => null,
+            'filePathSym' => null,
+            'message'=> "Spausk 'Tikrinti', kad sužinotum ar praleisti lankytoją"
+        ];
+
+        return view('layouts.content')->with('data', $data);
     }
 }

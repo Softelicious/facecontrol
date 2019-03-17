@@ -12,8 +12,11 @@ class LoginController extends Controller
         $username = $request['username'];
         $image = DB::table('users')->where('username', $username)->value('user_image');
         $data = [
-            'username' => $username,
-            'image' => $image
+            'username' => 'Vyr. Apsauginis: ' . $username,
+            'filePathSym' => null,
+            'filePath' => null,
+            'fileName' => null,
+            'message'=> "Spausk 'Tikrinti', kad sužinotum ar praleisti lankytoją"
         ];
 
         return view('layouts.content')->with('data', $data);

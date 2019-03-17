@@ -1,29 +1,25 @@
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/solid.css" integrity="sha384-rdyFrfAIC05c5ph7BKz3l5NG5yEottvO/DQ0dCrwD8gzeQDjYBHNr1ucUpQuljos" crossorigin="anonymous">
-        <link rel="stylesheet"  href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-        <LINK rel="stylesheet" type="text/css"
-              href='{!! asset("css/style.css") !!}' title="Default Styles " media="screen">
-
-        <title>Facecontrol!</title>
-    </head>
-    <body>
-        {{--////////--}}
-        @yield("content")
-        {{--////////--}}
-        <script>
-            document.getElementById('loading').style.display = 'none';
-            function landing() {
-                $data['username'] = 'Svečias!';
-                document.getElementById('landing').style.display = 'none';
-            }
-        </script>
-        <script src="{{ URL::asset('js/main.js') }}"></script>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    </body>
-</html>
+@extends('master')
+@section('content')
+    <nav class="navigacija navbar flex-row">
+        <ul class="navbar navbar-brand flex-row mr-lg-0">
+            <a class="login btn btn-item "href="login">Login</a>
+            <a class="reg btn btn-item btn-dark" href="register">Register</a>
+        </ul>
+        <div id="init" class="init justify-content-center text-white" >Naktinis klubas: <i>neparduota</i></div>
+        <div id="init" class="init justify-content-end text-white" >Apsauginis: Foxtrot</div>
+    </nav>
+    <div class="container p-0">
+        <div class="camera rounded bg-dark text-white ">
+            <div id="landing" class="flex row align-content-center justify-content-center w-75">
+                <video id="vid" >video</video>
+                    <a href="{{URL::to('/check/blacklist')}}" type="button" class="photo-check btn btn-primary mb-3" value="">Tikrinti</a>
+                    <div class = "control-panel">
+                        <ul class="photo d-flex flex-row bd-highlight">
+                            <a href="{{URL::to('/add_to/blacklist')}}" type="button" class="p-2 bd-highlight btn btn-danger mr-3" value="">Į juodąjį sąrašą</a><br>
+                            <a href="{{URL::to('/delete_from/blacklist')}}" type="button" class="p-2 bd-highlight btn btn-success mr-3" value="">Iš juodojo sąrašo</a>
+                        </ul>
+                    </div>
+            </div>
+        </div>
+    </div>
+@endsection

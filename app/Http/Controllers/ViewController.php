@@ -7,14 +7,30 @@ use Illuminate\Http\Request;
 
 class ViewController extends Controller
 {
-    public function home(){
+    public function index(){
 
         $data = [
             'username' => 'Svečias',
-            'image'=> 'noimage.jpg'
+            'filePath' => null,
+            'fileName' => null,
+            'filePathSym' => null,
+            'message'=> "Spausk 'Tikrinti', kad sužinotum ar praleisti lankytoją"
         ];
         return view('layouts.content')->with('data', $data);
     }
+
+    public function home(){
+
+        $data = [
+            'username' => 'Apsauginis',
+            'filePath' => null,
+            'fileName' => null,
+            'filePathSym' => null,
+            'message'=> "Spausk 'Tikrinti', kad sužinotum ar praleisti lankytoją"
+        ];
+        return view('layouts.content')->with('data', $data);
+    }
+
     public function login(){
         return view('layouts.login');
     }
@@ -23,5 +39,11 @@ class ViewController extends Controller
     }
     public function reminder(){
         return view('layouts.reminder');
+    }
+    public function security(){
+        return view('layouts.security');
+    }
+    public function test(){
+        return view('layouts.test');
     }
 }
