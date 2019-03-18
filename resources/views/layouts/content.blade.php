@@ -6,13 +6,14 @@
             <a class="login btn btn-item "href="{{URL::to('/login')}}">
             Login
             </a>
+            <a class="reg btn btn-item btn-dark" href="{{URL::to('/register')}}">Register</a>
         @endif
         @if($data['username']!= 'Apsauginis' && $data['username']!='Svečias')
             <a class="login btn btn-item "href="{{URL::to('/')}}">
                 Logout
             </a>
          @endif
-        <a class="reg btn btn-item btn-dark" href="{{URL::to('/register')}}">Register</a>
+
     </ul>
     <div id="init" class="init justify-content-center text-white" >Naktinis klubas: <i> Trademark&trade; </i></div>
     <div id="init" class="init justify-content-end text-white" >{{$data['username']}}</div>
