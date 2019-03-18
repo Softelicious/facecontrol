@@ -42,6 +42,7 @@ class RecognitionController extends Controller
             if($distance < 8){
                 $data = [
                     'username' => $request['username'],
+                    'message2' => "Vartotojas yra ATPAŽINTAS",
                     'message' => "Vartotojas yra atpažintas juodajame sąraše - NEPRALEISTI, nebent sumoka",
                     'filePath' => "public/blacklist/$item->name",
                     'filePathSym' => $item->path,
@@ -54,6 +55,7 @@ class RecognitionController extends Controller
         $data = [
             'username' => $request['username'],
             'message' => "Vartotojas neatpažintas juodajame sąraše. Įtrauk į juodąjį sąrašą jei jis tau nepatinka",
+            'message2' => "Vartotojas yra NEATPAŽINTAS",
             'filePath' => $pathTemp,
             'filePathSym' => $pathBlacklistSymlink,
             'fileName' => $fileName

@@ -2,10 +2,19 @@
 @section('content')
 <nav class="navigacija navbar flex-row">
     <ul class="navbar navbar-brand flex-row mr-lg-0">
-        <a class="login btn btn-item "href="{{URL::to('/login')}}">Login</a>
+        @if($data['username']== 'Apsauginis' || $data['username']=='Svečias')
+            <a class="login btn btn-item "href="{{URL::to('/login')}}">
+            Login
+            </a>
+        @endif
+        @if($data['username']!= 'Apsauginis' && $data['username']!='Svečias')
+            <a class="login btn btn-item "href="{{URL::to('/')}}">
+                Logout
+            </a>
+         @endif
         <a class="reg btn btn-item btn-dark" href="{{URL::to('/register')}}">Register</a>
     </ul>
-    <div id="init" class="init justify-content-center text-white" >Naktinis klubas: <i>Must steak eat saldainiai</i></div>
+    <div id="init" class="init justify-content-center text-white" >Naktinis klubas: <i> Trademark&trade; </i></div>
     <div id="init" class="init justify-content-end text-white" >{{$data['username']}}</div>
 </nav>
 
@@ -14,7 +23,7 @@
     <div class="camera rounded bg-dark text-white d-inline-block">
             @if($data['username'] == 'Svečias')
                 <div class="position-relative w-75 mx-auto p-5">
-                <p>Sveiki atvykę į "Face control" projektą</p>
+                <p>Sveiki atvykę į "Facecontrol" projektą</p>
                 <p>Tikslas - atpažinti nepageidaujamus žmones pagal jų veidus. Aplikacija lange transliuos kameros vaizdą. Nufotografuotas vaizdas bus palyginamas su nepageidaujamais asmenimis.</p>
                 <a href="{{URL::to('/home')}}" class="btn btn-primary btn-success"><span class="glyphicon glyphicon-hand-right"></span> Pirmyn</a>
                 </div>
@@ -52,7 +61,14 @@
                     @endif
                     <canvas id = "canvas" class ="d-none" width="735" height="550"></canvas>
                     <img id="img-check"  class="d-none" width="735" height="550"/>
-                    <div id = "user-info" class = "mr-3 mt-5 user-info">{{$data['message']}}</div>
+                    <div id = "user-info" class = "mr-3 mt-5 user-info">
+                        @if($data['username']== 'Apsauginis' || $data['username']=='Svečias')
+                                {{$data['message2']}}
+                        @endif
+                        @if($data['username']!= 'Apsauginis' && $data['username']!='Svečias')
+                                {{$data['message']}}
+                        @endif
+                    </div>
                 @endif
     </div>
 </div>

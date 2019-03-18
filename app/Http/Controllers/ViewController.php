@@ -14,6 +14,7 @@ class ViewController extends Controller
             'filePath' => null,
             'fileName' => null,
             'filePathSym' => null,
+            'message2' => "Spausk 'Tikrinti', kad sužinotum ar praleisti lankytoją",
             'message'=> "Spausk 'Tikrinti', kad sužinotum ar praleisti lankytoją"
         ];
         return view('layouts.content')->with('data', $data);
@@ -26,6 +27,7 @@ class ViewController extends Controller
             'filePath' => null,
             'fileName' => null,
             'filePathSym' => null,
+            'message2' => "Spausk 'Tikrinti', kad sužinotum ar praleisti lankytoją",
             'message'=> "Spausk 'Tikrinti', kad sužinotum ar praleisti lankytoją"
         ];
         return view('layouts.content')->with('data', $data);
