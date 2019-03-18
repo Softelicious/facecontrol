@@ -14,17 +14,13 @@
 Route::get('/', 'ViewController@index');
 Route::get('/home', 'ViewController@home');
 Route::get('/security', 'ViewController@security');
-
-Route::get('/login', 'ViewController@login');
-Route::get('/test', 'ViewController@test');
-
-
-Route::post('/login/auth', 'LoginController@auth');
-Route::post('/checkDatabaseForMatch', 'RecognitionController@checkDatabaseForMatch');
-Route::post('/add_to/blacklist', 'UsersController@addToBlacklist');
-Route::post('/delete_from/blacklist', 'UsersController@removeFromBlacklist');
-
-Route::get('/register', 'ViewController@register');
 Route::get('/reminder', 'ViewController@reminder');
-Route::resource('posts', 'PostsController');
-Route::resource('users', 'UsersController');
+Route::get('/login', 'ViewController@login');
+Route::get('/register', 'ViewController@register');
+
+Route::post('/check', 'RecognitionController@checkDatabaseForMatch');
+Route::post('/add', 'RecognitionController@addToBlacklist');
+Route::post('/delete', 'RecognitionController@removeFromBlacklist');
+
+Route::post('/users/login', 'UsersController@login');
+Route::post('/users/register', 'UsersController@register');

@@ -3,7 +3,7 @@
     <body class = 'login-body'>
     <div class="container">
         <img src="images/user.png">
-        <form method="POST" action="{{URL::to('/login/auth')}}">
+        <form method="POST" action="{{URL::to('/users/login')}}">
 
             <div class="reg-input">
                 <input type="text" name="username" placeholder="Įveskite vardą">

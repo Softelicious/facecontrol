@@ -13,33 +13,7 @@ use Illuminate\Support\Facades\DB;
 
 class UsersController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function register(Request $request)
     {
         $this->validate($request, [
             'username' => 'required|unique:users',
@@ -63,112 +37,14 @@ class UsersController extends Controller
         return redirect('/login');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        return $id;
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        return 55;
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
-
-    public function login(Request $request)
-    {
-        return 123;
-    }
-    public function checkBlacklist(Request $request)
-    {
-        //$username = $request['username'];
-        //$image = DB::table('users')->where('username', $username)->value('user_image');
+    public function login(Request $request){
+        $username = $request['username'];
+        $image = DB::table('users')->where('username', $username)->value('user_image');
         $data = [
-            'username' => 'Apsauginis',
-            'message'=> "Spausk 'Tikrinti', kad sužinotum ar praleisti lankytoją"
-        ];
-
-        return view('layouts.content')->with('data', $data);//
-    }
-    public function addToBlacklist(Request $request)
-    {
-        $this->validate($request, [
-            'filePath' => 'nullable',
-            'fileName' => 'nullable',
-            'filePathSym' => 'nullable',
-            'username' => 'required'
-        ]);
-        $fileName = $request['fileName'];
-
-        Storage::disk('local')->move($request['filePath'], "public/blacklist/$fileName");
-        $recognition = new Recognition();
-        $recognition->path = $request['filePathSym'];
-        $recognition->name = $fileName;
-        $recognition->save();
-
-        $data = [
-            'username' => $request['username'],
+            'username' => 'Vyr. Apsauginis: ' . $username,
+            'filePathSym' => null,
             'filePath' => null,
             'fileName' => null,
-            'filePathSym' => null,
-            'message'=> "Spausk 'Tikrinti', kad sužinotum ar praleisti lankytoją"
-        ];
-
-        return view('layouts.content')->with('data', $data);//
-    }
-    public function removeFromBlacklist(Request $request)
-    {
-        $this->validate($request, [
-            'filePath' => 'nullable',
-            'fileName' => 'nullable',
-            'filePathSym' => 'nullable',
-            'username' => 'required'
-        ]);
-        $fileName = $request['fileName'];
-
-        DB::table('recognition')->where('path', $request['filePathSym'])->delete();
-        Storage::disk('local')->delete($request['filePath']);
-        Storage::deleteDirectory("public/temp");
-        Storage::makeDirectory("public/temp");
-
-        $data = [
-            'username' => $request['username'],
-            'path' => null,
-            'fileName' => null,
-            'filePathSym' => null,
             'message'=> "Spausk 'Tikrinti', kad sužinotum ar praleisti lankytoją"
         ];
 

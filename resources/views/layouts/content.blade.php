@@ -31,7 +31,7 @@
                 @if($data['username'] != 'Svečias')
                     <div id="vidd" >Laukiamas leidimas naudoti kamerą</div>
                     <video id="vid" class="clearfix float-left" width="65%">video</video>
-                    <form method="post" action="{{URL::to('/checkDatabaseForMatch')}}" id="myForm" class="mt-4">
+                    <form method="post" action="{{URL::to('/check')}}" id="myForm" class="mt-4">
                         <input type="submit" class="buttonSubmit btn btn-primary ml-3" id="button-check" value="Tikrinti"/>
                         <input type="hidden" value="" name="path" id="path"/>
                         <input type="hidden" value="{{$data['username']}}" name="username" id="username"/>
@@ -39,7 +39,7 @@
                     </form>
                     @if($data['username']!= 'Apsauginis')
                         @if($data['message']== "Vartotojas neatpažintas juodajame sąraše. Įtrauk į juodąjį sąrašą jei jis tau nepatinka")
-                            <form action="{{URL::to('/add_to/blacklist')}}" method="post" class="mt-lg-5 mt-md-0" id="myForm2">
+                            <form action="{{URL::to('/add')}}" method="post" class="mt-lg-5 mt-md-0" id="myForm2">
                                 <input type="hidden" value="{{$data['username']}}" name="username" id="username"/>
                                 <input type="hidden" value="{{$data['filePath']}}" name="filePath" id="filePath"/>
                                 <input type="hidden" value="{{$data['filePathSym']}}" name="filePathSym" id="filePathSym"/>
@@ -49,7 +49,7 @@
                             </form>
                         @endif
                         @if($data['message']== "Vartotojas yra atpažintas juodajame sąraše - NEPRALEISTI, nebent sumoka")
-                                <form action="{{URL::to('/delete_from/blacklist')}}" method="post" class="mt-lg-5 mt-md-0" id="myForm3">
+                                <form action="{{URL::to('/delete')}}" method="post" class="mt-lg-5 mt-md-0" id="myForm3">
                                     <input type="hidden" value="{{$data['username']}}" name="username" id="username" />
                                     <input type="hidden" value="{{$data['filePath']}}" name="filePath" id="filePath"/>
                                     <input type="hidden" value="{{$data['filePathSym']}}" name="filePathSym" id="filePathSym"/>

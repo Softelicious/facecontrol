@@ -4,7 +4,7 @@
     <body class = 'login-body'>
     <div class="container">
         <img src="images/user.png">
-        <form  class = "md-form" action="{{URL::to('/users')}}" method = "post" enctype="multipart/form-data" class="dropzone" id="dropzone">
+        <form  class = "md-form" action="{{URL::to('/users/register')}}" method = "post" enctype="multipart/form-data" class="dropzone" id="dropzone">
 
             <div class="reg-input">
                 <input type="text" name="username" placeholder="Įveskite vardą">
