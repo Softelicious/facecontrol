@@ -38,16 +38,24 @@ class UsersController extends Controller
     }
 
     public function login(Request $request){
+        $this->validate($request, [
+            'username' => 'required',
+            'password' => 'required',
+        ]);
         $username = $request['username'];
-        $image = DB::table('users')->where('username', $username)->value('user_image');
-        $data = [
-            'username' => 'Vyr. Apsauginis: ' . $username,
-            'filePathSym' => null,
-            'filePath' => null,
-            'fileName' => null,
-            'message'=> "Spausk 'Tikrinti', kad sužinotum ar praleisti lankytoją"
-        ];
+        $pass = $request['password'];
+        if(Hash::check($pass, DB::table('users')->where('username', $username)->value('password'))){
+            $data = [
+                'username' => 'Vyr. Apsauginis: ' . $username,
+                'filePathSym' => null,
+                'filePath' => null,
+                'fileName' => null,
+                'message'=> "Spausk 'Tikrinti', kad sužinotum ar praleisti lankytoją"
+            ];
 
-        return view('layouts.content')->with('data', $data);
+            return view('layouts.content')->with('data', $data);
+        }else{
+            return redirect('/login');
+        }
     }
 }
